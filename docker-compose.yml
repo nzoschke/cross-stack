@@ -2,6 +2,9 @@ web:
   build: .
   command: ["bundle", "exec", "puma"]
   environment:
+    - AWS_REGION
+    - AWS_ACCESS_KEY_ID
+    - AWS_SECRET_ACCESS_KEY
     - RACK_ENV=development
   ports:
     - 3000:9292
