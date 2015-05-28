@@ -1,10 +1,22 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    aws-sdk (2.0.46)
+      aws-sdk-resources (= 2.0.46)
+    aws-sdk-core (2.0.46)
+      builder (~> 3.0)
+      jmespath (~> 1.0)
+      multi_json (~> 1.0)
+    aws-sdk-resources (2.0.46)
+      aws-sdk-core (= 2.0.46)
     backports (3.6.4)
+    builder (3.2.2)
     diff-lcs (1.2.5)
+    jmespath (1.0.2)
+      multi_json (~> 1.0)
     minitest (5.7.0)
     multi_json (1.11.0)
+    press (0.26)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     rack (1.6.1)
@@ -25,6 +37,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.2.0)
     rspec-support (3.2.2)
+    rubyzip (1.1.7)
     sinatra (1.4.6)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -42,8 +55,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (~> 2)
   minitest
+  press
   puma
   rspec
+  rubyzip
   sinatra
   sinatra-contrib
